@@ -106,7 +106,7 @@ public class Transport
       }
       private static Collator col = Collator.getInstance();
       static {
-         col.setDecomposition(Collator.FULL_DECOMPOSITION);
+         col.setDecomposition(Collator.CANONICAL_DECOMPOSITION);
          col.setStrength(Collator.PRIMARY);
       }
 		public static final int LOCK_TIMEOUT = 1000;
