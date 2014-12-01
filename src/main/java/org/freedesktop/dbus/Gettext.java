@@ -22,9 +22,18 @@ import java.util.ResourceBundle;
 
 public class Gettext
 {
-   private static ResourceBundle myResources =
-      ResourceBundle.getBundle("dbusjava_localized");
+   private static ResourceBundle myResources = null;
+   static {
+      try {
+         myResources = ResourceBundle.getBundle("dbusjava_localized");
+      }
+      catch (java.util.MissingResourceException e) {
+         e.printStackTrace();
+      }
+   }
    public static String _(String s) {
-      return myResources.getString(s);
+      if(null != myResources)
+         return myResources.getString(s);
+      return s;
    }
 }
