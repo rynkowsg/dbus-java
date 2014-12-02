@@ -23,7 +23,7 @@ JCFLAGS?=-Xlint:all -O -g:none
 JFLAGS+=-Djava.library.path=$(JAVAUNIXLIBDIR)
 
 # Source/Class locations
-SRCDIR=org/freedesktop
+SRCDIR=src/main/java/org/freedesktop
 CLASSDIR=classes/org/freedesktop/dbus
 
 # Installation variables. Controls the location of make install.  May be
