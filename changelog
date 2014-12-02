@@ -1,7 +1,15 @@
+Version 3.0:
+	
+	* Fix verbose message (patch of Robin Green)
+	* Fix of Makefile after Diego's maven migration (changed SRCDIR)
+	* Fix bug with Collable - Collable.FULL_DECOMPOSITION is not
+			supported in Android
+	* Fix bug with unavaliable resource dbusjava_localized
+
 Version 2.8:
 
-   * Patch manpage source to build with docbook2x (Patch from Alexander Kurtakov 
-         <akurtako -at- redhat -dot- com>)
+	* Patch manpage source to build with docbook2x (Patch from Alexander Kurtakov
+			<akurtako -at- redhat -dot- com>)
 
 Version 2.7:
 
