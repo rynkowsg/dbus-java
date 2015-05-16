@@ -38,10 +38,11 @@ MANPREFIX?=$(PREFIX)/share/man/man1
 JAVADOCPREFIX?=$(DOCPREFIX)
 
 # Installation directory of the java-unix libraries
-JAVAUNIXLIBDIR?=/usr/lib/jni
+JAVAUNIXLIBDIR?=$(PREFIX)/lib/jni
 # Installation directory of the java-unix jars
-JAVAUNIXJARDIR?=/usr/share/java
+JAVAUNIXJARDIR?=$(PREFIX)/share/java
 DEBUG=disable
+
 
 # Version numbering
 VERSION = $(shell sed -n '1s/.* \(.*\):/\1/p' changelog)
@@ -51,6 +52,9 @@ DISTFILES=dbus-java.tex Makefile org tmp-session.conf CreateInterface.sgml DBusD
 
 all: bin doc man
 bin: libdbus-java-$(VERSION).jar dbus-java-viewer-$(VERSION).jar bin/DBusDaemon bin/ListDBus bin/CreateInterface bin/DBusViewer dbus-java-bin-$(VERSION).jar bin/DBusCall
+	@echo ----------------------------------------------------------------------------------------------
+	@echo JAVAUNIXLIBDIR: $(JAVAUNIXLIBDIR)
+	@echo JAVAUNIXJARDIR: $(JAVAUNIXJARDIR)
 man: CreateInterface.1 ListDBus.1 DBusDaemon.1 DBusViewer.1 DBusCall.1 
 doc: doc/dbus-java.dvi doc/dbus-java.ps doc/dbus-java.pdf doc/dbus-java/index.html doc/api/index.html
 
