@@ -1,5 +1,27 @@
+# Eclipse files
 .classpath
 .project
 .settings/
 target/
+
+# IntelliJ Idea files
+.idea/
+*.iml
+
+# Makefile files
+.bin
+.binclasses
+.classes
+.doc
+.testclasses
+.viewerclasses
+CreateInterface.1
+Manifest
+bin
+classes
+doc
+*.jar
+
+# Vim files
+*.swp
 
