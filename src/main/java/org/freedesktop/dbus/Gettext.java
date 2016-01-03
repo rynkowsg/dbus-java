@@ -18,6 +18,7 @@
  */
 package org.freedesktop.dbus;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Gettext
@@ -25,7 +26,7 @@ public class Gettext
    private static ResourceBundle myResources = null;
    static {
       try {
-         myResources = ResourceBundle.getBundle("dbusjava_localized");
+         myResources = ResourceBundle.getBundle("dbusjava_localized", Locale.UK);
       }
       catch (java.util.MissingResourceException e) {
          e.printStackTrace();
